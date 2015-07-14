@@ -52,6 +52,7 @@ public class HMCommands implements CommandExecutor {
 
             drawMap.setBase(holoMap.getBase());
             drawMap.setBlockParticles(holoMap.getBlockParticles());
+            System.out.println(holoMap.getBlockParticles());
             drawMap.start();
         } else {
             sender.sendMessage(ChatColor.RED + "point1, point2");

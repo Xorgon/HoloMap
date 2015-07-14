@@ -22,7 +22,6 @@ public class DrawMap extends Effect {
 
     public DrawMap(EffectManager effectManager) {
         super(effectManager);
-        type = EffectType.REPEATING;
         infinite();
         particle = ParticleEffect.REDSTONE;
         period = 5;
@@ -39,6 +38,7 @@ public class DrawMap extends Effect {
         try {
             //TODO Null checks.
             for (BlockParticle bP : blockParticles) {
+                System.out.println(bP);
                 if (bP.getType() != BlockParticle.BlockParticleType.AIR) {
                     this.color = BlockParticle.getColor(bP.getType());
                     Location loc = base.clone().add(bP.getLoc().clone().multiply(particleSep));
